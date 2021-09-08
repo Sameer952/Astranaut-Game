@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.font{
+    font-family:'Indie Flower', cursive;
+}
+body{
+    background-image: url("background.jpeg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.gamebody{
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    float: right;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.astro{
+    background-image: url(astro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    width: 100px;
+    position:absolute;
+    top: 78vh;
+    left: 20vh;  
+}
+.obstacle{
+    background-image: url(obstacle.png);
+    background-size: cover;
+    height: 160px;
+    width: 130px;
+    position:absolute;
+    left: 160vh;
+    top: 78vh;
+}
+.gameover{
+    visibility: hidden;
+}
+@keyframes obstaclemove{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -20vw;
+    }
+}
+.obstaclemove{
+    animation: obstaclemove linear 3s infinite;
+}
+
+@keyframes aastrojump {
+    
+    0%{
+        bottom: 20vh;
+    }
+    50%{
+       top: 10vh;
+    }
+    70%{
+        top: 5vh;
+    }
+    100%{
+        bottom: 0vh;
+    }
+}
+.astro-jump{
+    animation: aastrojump .9s linear infinite;
+}
+
+
